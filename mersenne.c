@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
     }
     
     for (i = 0; i < num; ++i) {
-	printf("%11ud  ", extract());
+	printf("%12ud  ", extract());
 	if ((i + 1) % 10 == 0) {
 	    printf("\n");
 	}
@@ -26,6 +26,8 @@ int main(int argc, char* argv[]) {
     
     return 0;    
 }
+
+
 
 uint32_t extract(void) {
     if (0 == index) {
@@ -53,7 +55,7 @@ void initialize(void) {
     MT[i] = seed;
 
     for (i = 1; i < 624; ++i) {
-	MT[i] = (uint32_t)MASK & (1812433253 * (MT[i - 1] ^ (MT[i - 1] >> 30)) + i);
+	MT[i] = (uint32_t)MASK & (1812433253UL * (MT[i - 1] ^ (MT[i - 1] >> 30)) + i);
     }
 }
 
@@ -63,7 +65,7 @@ void generate(void) {
 	uint32_t y = ((MT[i] & 0x80000000) + (MT[(i+1) % 624] & 0x7fffffff));
 	MT[i] = MT[(i + 397) % 624] ^ y >> 1;
 	if ((y % 2) != 0) {
-	    MT[i] = MT[i] ^ 0x9908b0df;
+	    MT[i] ^= 0x9908b0df;
 	}
     }
 }
