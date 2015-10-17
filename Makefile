@@ -19,4 +19,5 @@ clean:
 	rm -f *~
 	rm -f *#
 	rm -f *.o
-	rm -f all
+	rm -f mersenne
+	rm -f kiss
