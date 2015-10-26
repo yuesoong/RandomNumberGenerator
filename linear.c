@@ -3,8 +3,6 @@
 #include <time.h>
 #include <stdint.h>
 
-#define MASK  0xffffffff
-
 int main(int argc, char *argv[]) {
     int num = 0;
     
