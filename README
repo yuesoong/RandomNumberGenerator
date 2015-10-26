@@ -2,3 +2,12 @@ Here is the code written for the project of CS55, Security and Privacy.
 
 My project is about the analysis and implementation of some random
 number generator.
+
+mersenne.c implements Mersenne Twister:
+	   run example: ./mersenne 500
+
+kiss.c implements Multiply With Carry:
+       run example: ./kiss 500
+
+linear.c implements Linear congruential generator:
+	 run example: ./linear 500

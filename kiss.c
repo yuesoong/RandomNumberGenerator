@@ -19,6 +19,9 @@ int num = 1;
 int main(int argc, char* argv[]) {
     if (2 == argc) {
 	num = atoi(argv[1]);
+    } else {
+	printf("Please just provide the number of random numbers needed.\n");
+	return 0;
     }
     int i;
     uint32_t seed = time(NULL);

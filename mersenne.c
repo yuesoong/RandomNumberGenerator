@@ -15,6 +15,9 @@ int main(int argc, char* argv[]) {
     int num = 1, i;
     if (2 == argc) {
 	num = atoi(argv[1]);
+    } else {
+	printf("Please just provide the number of random nunmbers needed.\n");
+	return 0;
     }
     
     for (i = 0; i < num; ++i) {
