@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -pedantic -pthread -std=c99 -ggdb
 
-all: mersenne kiss linear
+all: mersenne kiss linear binary
 
 mersenne: mersenne.o
 	$(CC) $(CFLAGS) -o mersenne mersenne.o
@@ -21,6 +21,12 @@ linear: linear.o
 linear.o: linear.c
 	$(CC) $(CFLAGS) -c linear.c
 
+binary: binary.o
+	$(CC) $(CFLAGS) -o binary binary.o
+
+binary.o: binary.c
+	$(CC) $(CFLAGS) -c binary.c
+
 clean:
 	rm -f *~
 	rm -f *#
@@ -28,3 +34,4 @@ clean:
 	rm -f mersenne
 	rm -f kiss
 	rm -f linear
+	rm -f binary

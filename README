@@ -11,3 +11,6 @@ kiss.c implements Multiply With Carry:
 
 linear.c implements Linear congruential generator:
 	 run example: ./linear 500
+
+binary.c implements pseudorandom binary sequence:
+	 run exampe: ./binary 500
